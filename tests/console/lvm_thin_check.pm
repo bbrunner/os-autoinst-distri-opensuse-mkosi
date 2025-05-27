@@ -14,6 +14,7 @@ use base "opensusebasetest";
 use testapi;
 use serial_terminal 'select_serial_terminal';
 use utils;
+use power_action_utils 'power_action';
 
 sub run {
     my $lv_stats = {
@@ -51,6 +52,9 @@ sub run {
     if ((script_run 'diff original_usage instant_usage') != 1) {
         die "LVM usage stats do not differ!";
     }
+
+    select_console('root-console');
+    power_action('poweroff', textmode => 1, keepconsole => 1);
 }
 
 1;

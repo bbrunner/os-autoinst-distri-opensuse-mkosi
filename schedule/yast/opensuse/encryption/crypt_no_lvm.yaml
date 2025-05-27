@@ -43,6 +43,7 @@ schedule:
   - installation/boot_encrypt
   - installation/first_boot
   - console/validate_encrypt
+  - shutdown/shutdown
 test_data:
   crypttab:
     num_devices_encrypted: 2

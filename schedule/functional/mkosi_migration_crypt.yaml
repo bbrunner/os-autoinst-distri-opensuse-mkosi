@@ -1,0 +1,11 @@
+name:           mkosi_migration_crypt
+description:    >
+    Maintainer: bbrunner.
+    Migrate from dracut to mkosi on
+    encrypted devices tests
+schedule:
+    - installation/grub_test
+    - installation/boot_encrypt
+    - '{{bootloader}}'
+    - console/migrate_dracut_mkosi
+    - shutdown/shutdown

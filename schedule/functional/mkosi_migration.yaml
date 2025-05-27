@@ -1,0 +1,9 @@
+name:           mkosi_migration
+description:    >
+    Maintainer: bbrunner.
+    Migrate from dracut to mkosi tests
+schedule:
+    - '{{bootloader}}'
+    - boot/boot_to_desktop
+    - console/migrate_dracut_mkosi
+    - shutdown/shutdown
